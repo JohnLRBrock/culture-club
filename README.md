@@ -14,8 +14,10 @@ We require Node.js 5.0 or greater.
 
 We're using PostgreSQL 10.5
 
-To run the program, CD into the program directory and run `$ mix ecto.create` to create the database.
-Then run `$ mix phx.server` to start up your server.
+To run the program, CD into the program directory.
+First run `$ mix deps.get` to get the dependencies.
+Then run `$ mix ecto.create` to create the database.
+Finally run `$ mix phx.server` to start up your server.
 
 # CultureClubWebsite
 
