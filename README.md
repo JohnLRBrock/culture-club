@@ -12,7 +12,14 @@ Install Elixir by following their guide [here](https://elixir-lang.org/install.h
 
 We require Node.js 5.0 or greater.
 
-We're using PostgreSQL 10.5
+Install PostgreSQL. We're using PostgreSQL 10.5 I used [this tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
+Common Postgres Problems:
+`** (Postgrex.Error) FATAL 28P01 (invalid_password): password authentication failed for user "postgres"`
+The app uses a postgres database with the role 'postgres' and password 'postgres'. This error means that your postgres server doesn't have the proper password. I fixed it on my computer by running `$ psql -c "ALTER USER postgres WITH PASSWORD 'postgres'"`
+`psql: could not connect to server: No such file or directory
+        Is the server running locally and accepting
+        connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?`
+This error is because the server isn't running yet. Run the command `$ sudo service postgresql start`
 
 To run the program, CD into the program directory.
 First run `$ mix deps.get` to get the dependencies.
