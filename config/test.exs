@@ -15,5 +15,5 @@ config :culture_club_website, CultureClubWebsite.Repo,
   username: "postgres",
   password: "postgres",
   database: "culture_club_website_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox
