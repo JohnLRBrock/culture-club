@@ -54,5 +54,5 @@ config :culture_club_website, CultureClubWebsite.Repo,
   username: "postgres",
   password: "postgres",
   database: "culture_club_website_dev",
-  hostname: "localhost",
+  hostname: "db",
   pool_size: 10
